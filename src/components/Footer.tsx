@@ -22,7 +22,7 @@ const getClinicValue = (val: string, fallback: string) => {
   return val;
 };
 
-const NAME_VAL = getClinicValue(CLINIC_INFO.name, "Ganga Dental Care");
+const NAME_VAL = getClinicValue(CLINIC_INFO.name, "Ganga Dental");
 const PHONE_VAL = getClinicValue(CLINIC_INFO.phone, "+91 82186 30020");
 const EMAIL_VAL = getClinicValue(CLINIC_INFO.email, "care@gangadental.com");
 const ADDRESS_VAL = getClinicValue(CLINIC_INFO.address, "Nigam Rd, Central Hope Town, Selakui, Uttarakhand 248011");
@@ -46,9 +46,14 @@ export default function Footer() {
               <div className="w-10 h-10 bg-gradient-to-br from-[#103A63] to-[#0FB9B1] rounded-xl flex items-center justify-center shadow-md">
                 <LogoIcon className="w-5 h-5 text-white" />
               </div>
-              <span className="font-heading font-extrabold text-xl text-white tracking-tight">
-                {NAME_VAL}
-              </span>
+              <div className="flex flex-col text-left">
+                <span className="font-heading font-extrabold text-xl text-white tracking-tight leading-none">
+                  Ganga Dental
+                </span>
+                <span className="text-[9px] uppercase tracking-[0.2em] font-black text-[#0FB9B1] mt-1.5 leading-none">
+                  SELAKUI
+                </span>
+              </div>
             </a>
             
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-body font-light max-w-md md:max-w-none">

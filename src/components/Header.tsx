@@ -87,10 +87,10 @@ export default function Header() {
   return (
     <header 
       id="header"
-      className={`fixed top-0 left-0 right-0 z-50 bg-[#FFFFFF] border-b border-[#E2E8F0] transition-all duration-[350ms] ease-in-out ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-[#FFFFFF] border-b border-[#E2E8F0] transition-all duration-[350ms] ease-in-out h-[72px] ${
         isScrolled 
-          ? 'h-[72px] shadow-[0_8px_30px_rgba(15,23,42,0.08)]' 
-          : 'h-[88px] shadow-none'
+          ? 'shadow-[0_8px_30px_rgba(15,23,42,0.08)]' 
+          : 'shadow-none'
       }`}
     >
       <div className="max-w-[1280px] mx-auto h-full px-6 lg:px-8">
@@ -99,27 +99,23 @@ export default function Header() {
           {/* Left Side: Premium dental logo icon & Clinic name */}
           <a 
             href="#" 
-            className={`flex items-center gap-3 group transition-all duration-[300ms] ease-in-out origin-left ${
-              isScrolled ? 'scale-[0.92]' : 'scale-100'
-            }`}
+            className="flex items-center gap-3 group transition-all duration-[300ms] ease-in-out origin-left scale-[0.92]"
           >
             <div className="w-11 h-11 rounded-full bg-gradient-to-tr from-[#0A2540] to-[#0FB9B1] flex items-center justify-center transition-all duration-[300ms] group-hover:scale-105 shadow-md shadow-[#0FB9B1]/15 relative overflow-hidden">
               <LogoIcon className="w-[22px] h-[22px] text-white" />
             </div>
             <div className="flex flex-col text-left">
               <span className="font-heading font-extrabold text-xl tracking-tight text-[#0A2540] leading-none transition-colors duration-300 group-hover:text-[#0FB9B1]">
-                Ganga
+                Ganga Dental
               </span>
-              <span className="text-[9px] uppercase tracking-widest font-bold text-[#475569] mt-1.5 leading-none">
-                Dental Care
+              <span className="text-[9px] uppercase tracking-[0.2em] font-black text-[#0FB9B1] mt-1.5 leading-none">
+                SELAKUI
               </span>
             </div>
           </a>
 
           {/* Center Navigation */}
-          <nav className={`hidden lg:flex items-center transition-all duration-[350ms] ease-in-out ${
-            isScrolled ? 'gap-6' : 'gap-[36px]'
-          }`}>
+          <nav className="hidden lg:flex items-center transition-all duration-[350ms] ease-in-out gap-6">
             {navItems.map((item) => {
               const isActive = activeSection === item.id;
               
@@ -276,10 +272,10 @@ export default function Header() {
                   </div>
                   <div className="flex flex-col text-left">
                     <span className="font-heading font-extrabold text-lg text-[#0A2540] leading-none">
-                      Ganga
+                      Ganga Dental
                     </span>
-                    <span className="text-[8px] uppercase tracking-widest font-bold text-[#475569] mt-1.5 leading-none">
-                      Dental Care
+                    <span className="text-[8px] uppercase tracking-[0.2em] font-black text-[#0FB9B1] mt-1.5 leading-none">
+                      SELAKUI
                     </span>
                   </div>
                 </div>
